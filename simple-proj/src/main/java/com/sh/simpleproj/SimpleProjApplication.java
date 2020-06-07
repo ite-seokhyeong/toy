@@ -9,7 +9,8 @@ public class SimpleProjApplication {
 
 	public static void main(String[] args) {
 		new SpringApplicationBuilder(SimpleProjApplication.class)
-		.initializers(new WebServerConfig()).run();
+				.initializers(new WebServerConfig())
+				.run();
 		//SpringApplication.run(SimpleProjApplication.class, args);
 	}
 
