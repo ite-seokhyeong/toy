@@ -1,13 +1,16 @@
 package com.sh.simpleproj;
 
-import org.springframework.boot.SpringApplication;
+import com.sh.simpleproj.config.WebServerConfig;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 
 @SpringBootApplication
 public class SimpleProjApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SimpleProjApplication.class, args);
+		new SpringApplicationBuilder(SimpleProjApplication.class)
+		.initializers(new WebServerConfig()).run();
+		//SpringApplication.run(SimpleProjApplication.class, args);
 	}
 
 }

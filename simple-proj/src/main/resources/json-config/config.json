@@ -1,17 +1,4 @@
 {
-  "server-port" : 8000,
-  "error-page-list" : [
-    {
-      "errorCode" : 403,
-      "pageName" : "simple403"
-    },
-    {
-      "errorCode" : 404,
-      "pageName" : "simple404"
-    },
-    {
-      "errorCode" : 500,
-      "pageName" : "simple500"
-    }
-  ]
+  "server.port" : "8001",
+  "page404" : "/simple404.html"
 }
