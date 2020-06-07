@@ -1,4 +1,8 @@
-package com.sh.simpleproj.controller;
+package com.sh.simpleproj.servlet;
+
+import com.sh.simpleproj.component.HttpRequest;
+import com.sh.simpleproj.component.HttpResponse;
+import com.sh.simpleproj.component.SimpleServlet;
 
 import javax.servlet.*;
 import java.io.IOException;
@@ -18,7 +22,7 @@ public class Hello implements SimpleServlet {
 
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
-        System.out.println("init()");
+
     }
 
     @Override
@@ -28,7 +32,7 @@ public class Hello implements SimpleServlet {
 
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
-        System.out.println("service()");
+
     }
 
     @Override
@@ -38,6 +42,6 @@ public class Hello implements SimpleServlet {
 
     @Override
     public void destroy() {
-        System.out.println("destroy()");
+
     }
 }

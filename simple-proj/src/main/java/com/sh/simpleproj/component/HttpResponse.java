@@ -1,4 +1,4 @@
-package com.sh.simpleproj.controller;
+package com.sh.simpleproj.component;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpServletResponseWrapper;

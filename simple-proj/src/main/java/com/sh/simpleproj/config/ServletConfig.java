@@ -1,7 +1,7 @@
 package com.sh.simpleproj.config;
 
-import com.sh.simpleproj.controller.CurrentTime;
-import com.sh.simpleproj.controller.Hello;
+import com.sh.simpleproj.servlet.CurrentTime;
+import com.sh.simpleproj.servlet.Hello;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

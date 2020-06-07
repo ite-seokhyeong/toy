@@ -1,4 +1,8 @@
-package com.sh.simpleproj.controller;
+package com.sh.simpleproj.servlet;
+
+import com.sh.simpleproj.component.HttpRequest;
+import com.sh.simpleproj.component.HttpResponse;
+import com.sh.simpleproj.component.SimpleServlet;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
