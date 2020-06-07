@@ -2,5 +2,7 @@
   "server.port" : "8001",
   "page403" : "/error/simple403.html",
   "page404" : "/error/simple404.html",
-  "page500" : "/error/simple500.html"
+  "page500" : "/error/simple500.html",
+  "server.contextPath.book" : "/book",
+  "server.contextPath.shopping" : "/shopping"
 }
