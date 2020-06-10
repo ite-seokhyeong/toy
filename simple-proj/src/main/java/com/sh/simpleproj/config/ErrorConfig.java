@@ -16,9 +16,6 @@ public class ErrorConfig implements WebServerFactoryCustomizer<ConfigurableWebSe
 
     @Override
     public void customize(ConfigurableWebServerFactory factory) {
-//        System.out.println(environment.getProperty("page403"));
-//        System.out.println(environment.getProperty("page404"));
-//        System.out.println(environment.getProperty("page500"));
         //HTTP errorCode 별 에러페이지 설정
         factory.addErrorPages(new ErrorPage(HttpStatus.FORBIDDEN, environment.getProperty("page403")));
         factory.addErrorPages(new ErrorPage(HttpStatus.NOT_FOUND, environment.getProperty("page404")));

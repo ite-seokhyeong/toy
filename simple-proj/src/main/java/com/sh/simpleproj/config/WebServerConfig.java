@@ -17,7 +17,6 @@ public class WebServerConfig implements ApplicationContextInitializer<Configurab
 
     @Override
     public void initialize(ConfigurableApplicationContext configurableApplicationContext) {
-
         try {
             //json 포맷으로 작성한 프로퍼티 값을 읽어온다.
             Resource resource = configurableApplicationContext.getResource("classpath:json-config/config.json");
