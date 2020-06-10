@@ -18,15 +18,28 @@ public class Hello implements SimpleServlet {
 
     @Override
     public void service(HttpRequest req, HttpResponse res) throws IOException {
-        logger.info("custom servlce()");
-        java.io.Writer writer = res.getWriter();
-        writer.write("Hello, ");
-        writer.write(req.getParameter("name"));
+        logger.info("Custom Service!");
+
+        try {
+            java.io.Writer writer = res.getWriter();
+            writer.write("Hello, ");
+            writer.write(req.getParameter("name"));
+
+            if (req.getParameter("name") != null && !req.getParameter("name").isBlank()) {
+                writer.write(req.getParameter("name"));
+            } else {
+                logger.error("No parameter - name");
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace(); //catalina.out 기록
+            logger.error(e.getMessage());
+        }
     }
 
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
-
+        logger.info("Hello - servletName: {}", servletConfig.getServletName());
     }
 
     @Override
@@ -36,10 +49,21 @@ public class Hello implements SimpleServlet {
 
     @Override
     public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
-        logger.info("default service()");
-        java.io.Writer writer = servletResponse.getWriter();
-        writer.write("Hello, ");
-        writer.write(servletRequest.getParameter("name"));
+        logger.info("Default Service!");
+
+        try {
+            java.io.Writer writer = servletResponse.getWriter();
+            writer.write("Hello, ");
+
+            if (servletRequest.getParameter("name") != null && !servletRequest.getParameter("name").isBlank()) {
+                writer.write(servletRequest.getParameter("name"));
+            } else {
+                logger.error("No parameter - name");
+            }
+        } catch (Exception e) {
+            e.printStackTrace(); //catalina.out 기록
+            logger.error(e.getMessage());
+        }
     }
 
     @Override

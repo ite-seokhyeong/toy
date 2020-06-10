@@ -1,21 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
 
-    <property name="LOG_HOME" value="/Users/itesh/simple-logs" />
+    <!-- 로그 저장 경로는 내부경로 사용 -->
+    <property name="LOG_HOME" value="simple-logs" />
     <property name="LOG_PATTERN" value="%logger{36} %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"/>
 
-<!--    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">-->
-<!--        <file>${LOG_HOME}/simple.log</file>-->
-<!--        &lt;!&ndash; 일자별 로그 저장 &ndash;&gt;-->
-<!--        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">-->
-<!--            <fileNamePattern>${LOG_HOME}/simple.log.%d{yyyy-MM-dd}.log</fileNamePattern>-->
-<!--            &lt;!&ndash; 30일 보관&ndash;&gt;-->
-<!--            <maxHistory>30</maxHistory>-->
-<!--        </rollingPolicy>-->
-<!--        <encoder>-->
-<!--            <pattern>${LOG_PATTERN}</pattern>-->
-<!--        </encoder>-->
-<!--    </appender>-->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_HOME}/simple.log</file>
+        <!-- 일자별 로그 저장 -->
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${LOG_HOME}/simple.log.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <!-- 30일 보관-->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>
@@ -26,12 +27,12 @@
 
     <logger name="org.springframework" level="INFO" additivity="false">
         <appender-ref ref="STDOUT" />
-<!--        <appender-ref ref="FILE" />-->
+        <appender-ref ref="FILE" />
     </logger>
 
     <!-- turn OFF all logging (children can override) -->
     <root level="INFO">
         <appender-ref ref="STDOUT" />
-<!--        <appender-ref ref="FILE" />-->
+        <appender-ref ref="FILE" />
     </root>
 </configuration>

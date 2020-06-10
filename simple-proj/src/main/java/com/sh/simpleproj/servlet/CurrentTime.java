@@ -3,6 +3,8 @@ package com.sh.simpleproj.servlet;
 import com.sh.simpleproj.component.HttpRequest;
 import com.sh.simpleproj.component.HttpResponse;
 import com.sh.simpleproj.component.SimpleServlet;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -19,6 +21,8 @@ import java.util.Calendar;
  */
 public class CurrentTime implements SimpleServlet {
 
+    static final Logger logger = LoggerFactory.getLogger(Hello.class);
+
     @Override
     public void service(HttpRequest req, HttpResponse res) throws IOException {
 
@@ -26,7 +30,7 @@ public class CurrentTime implements SimpleServlet {
 
     @Override
     public void init(ServletConfig servletConfig) throws ServletException {
-
+        logger.info("CurrentTime - servletName: {}", servletConfig.getServletName());
     }
 
     @Override
@@ -35,8 +39,9 @@ public class CurrentTime implements SimpleServlet {
     }
 
     @Override
-    public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws ServletException, IOException {
-        HttpServletRequest httpServletRequest = (HttpServletRequest) servletRequest;
+    public void service(ServletRequest servletRequest, ServletResponse servletResponse) throws IOException {
+        logger.info("Default Service!");
+
         HttpServletResponse httpServletResponse = (HttpServletResponse) servletResponse;
 
         Calendar calendar = Calendar.getInstance();

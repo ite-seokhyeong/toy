@@ -8,7 +8,6 @@ import javax.servlet.http.HttpServletRequestWrapper;
 public class ServletContextRequestWrapper extends HttpServletRequestWrapper {
 
     private String contextPath;
-    private String servletPath;
 
     public ServletContextRequestWrapper(HttpServletRequest request) {
         super(request);
@@ -30,14 +29,6 @@ public class ServletContextRequestWrapper extends HttpServletRequestWrapper {
             return contextPath;
         }
         return super.getContextPath();
-    }
-
-    @Override
-    public String getServletPath() {
-        if (!StringUtils.isEmpty(servletPath)) {
-            return servletPath;
-        }
-        return super.getServletPath();
     }
 
     @Override

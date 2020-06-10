@@ -41,7 +41,9 @@ public class SimpleFilter extends OncePerRequestFilter {
         } else if (requestDomain.equals(REQUEST_DOMAINS[1])) { //shopping.com으로 요청이 들어오면 -> contextPath: /shopping
             wrapper.setContextPath(httpServletRequest.getContextPath() + environment.getProperty("contextPath2"));
         } else { //localhost 테스트용
-            wrapper.setContextPath(httpServletRequest.getContextPath() + environment.getProperty("contextPath2"));
+            //wrapper.setContextPath(httpServletRequest.getContextPath() + environment.getProperty("contextPath2"));
+            //VirtualHost테스트
+            //서블릿테스트
         }
 
         String extraURI = "";
