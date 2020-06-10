@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/book")
 public class BookController {
 
-    static final Logger logger = LoggerFactory.getLogger(SimpleController.class);
+    static final Logger logger = LoggerFactory.getLogger(BookController.class);
 
     @RequestMapping("")
     public String goBookHome() {

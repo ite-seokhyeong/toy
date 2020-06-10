@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/shopping")
 public class ShoppingController {
 
-    static final Logger logger = LoggerFactory.getLogger(SimpleController.class);
+    static final Logger logger = LoggerFactory.getLogger(ShoppingController.class);
 
     @RequestMapping("")
     public String goShoppingHome() {

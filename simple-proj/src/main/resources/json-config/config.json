@@ -4,5 +4,6 @@
   "page404" : "/error/simple404.html",
   "page500" : "/error/simple500.html",
   "contextPath1" : "/book",
-  "contextPath2" : "/shopping"
+  "contextPath2" : "/shopping",
+  "testFlagVal" : 1
 }

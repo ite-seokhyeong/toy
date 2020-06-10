@@ -44,8 +44,14 @@ public class SimpleFilter extends OncePerRequestFilter {
             //wrapper.setContextPath(httpServletRequest.getContextPath() + environment.getProperty("contextPath2"));
             //VirtualHost테스트
             //서블릿테스트
-
-            //TODO: 테스트를 위해 외부 설정값으로 빼기! multiTest여부 3가지 값 - book.com, shopping.com, localhost 3가지 모두 가능하도록
+            //테스트를 위해 외부 설정값으로 뺌
+            if (Integer.parseInt(environment.getProperty("testFlagVal")) == 0) { //book.com으로 들어왔다고 가정
+                wrapper.setContextPath(httpServletRequest.getContextPath() + environment.getProperty("contextPath1"));
+            } else if (Integer.parseInt(environment.getProperty("testFlagVal")) == 1) { //shopping.com으로 들어왔다고 가정
+                wrapper.setContextPath(httpServletRequest.getContextPath() + environment.getProperty("contextPath2"));
+            } else { //localhost
+                //do nothing
+            }
         }
 
         String extraURI = "";
