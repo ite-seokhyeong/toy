@@ -12,13 +12,16 @@ import org.springframework.core.env.Environment;
 @Configuration
 public class FilterConfig {
 
-    public SimpleFilter simpleFilter() {
-        return new SimpleFilter();
+    @Autowired
+    Environment environment;
+
+    public SimpleFilter simpleFilter(Environment environment) {
+        return new SimpleFilter(environment);
     }
 
     public FilterRegistrationBean wrapRequestFilterRegistrationBean() {
         FilterRegistrationBean registrationBean = new FilterRegistrationBean();
-        registrationBean.setFilter(simpleFilter());
+        registrationBean.setFilter(simpleFilter(environment));
         registrationBean.setName("simpleFilter");
         registrationBean.addUrlPatterns("/*");
         registrationBean.setOrder(1);
