@@ -1,7 +1,5 @@
 # Spring Initializer 프로젝트 직접 만들기
 
-#
-
 ## 목표
 
 Spring Initializer를 사용하지 않고, 그래들을 사용하여 스프링부트 프로젝트를 생성한다. 
