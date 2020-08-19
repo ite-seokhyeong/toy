@@ -1,22 +1,22 @@
 # Spring Initializer 프로젝트 직접 만들기
 
-
+#
 
 ## 목표
 
 Spring Initializer를 사용하지 않고, 그래들을 사용하여 스프링부트 프로젝트를 생성한다. 
 
-
+#
 
 ## 개발환경
 
 - Mac OS
 - Intellij Community
-- Gradle
+- Gradle 6.4.1
 - Springboot 2.4.0
 - Java 11
 
-
+#
 
 ## Step
 
@@ -32,7 +32,7 @@ Spring Initializer를 사용하지 않고, 그래들을 사용하여 스프링�
 
 - .gradle과 gradle > wrapper > gradle-wrapper.properties를 확인해보면 Gradle 버전은 5.2.1로 잡힌 것을 확인할 수 있다. 스프링 부트의 버전과 호환되는 버전으로 변경해야할 수도 있음을 염두해둘 것
 
-
+#
 
 ### 2. 빌드 파일 수정 (*)
 
@@ -136,7 +136,7 @@ test {
 > > Failed to apply plugin [id 'org.springframework.boot']
 > > Spring Boot plugin requires Gradle 5 (5.6.x only) or Gradle 6 (6.3 or later). The current version is Gradle 5.2.1
 
-
+#
 
 ### 3. 그래들 버전 변경 및 확인
 
@@ -172,7 +172,7 @@ zipStorePath=wrapper/dists
 >
 > > Main class name has not been configured and it could not be resolved
 
-
+#
 
 ### 4. 스프링부트 메인클래스 생성 (*)
 
@@ -206,7 +206,7 @@ public class MainApplication {
 >
 >   (TODO)
 
-
+#
 
 ### 5. 간단한 컨트롤러 만들기
 
