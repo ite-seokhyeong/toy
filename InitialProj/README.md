@@ -122,6 +122,7 @@ test {
 >
 > spring-boot-starter를 디펜던시로 추가하고 spring-boot 실행하면 바로 꺼진다. spring-boot-starter-web을 디펜던시로 추가해서 해결! spring-boot-starter-web이 포함하고 있는 모듈은 아래와 같다. 
 >
+> - spring-boot-starter
 > - spring-boot-starter-json
 > - spring-boot-starter-tomcat
 > - spring-web
