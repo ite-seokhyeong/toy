@@ -121,8 +121,9 @@ test {
 
 > <B>spring-boot-starter vs. spring-boot-starter-web </B>
 >
-> (TODO)
-
+> spring-boot-starter를 디펜던시로 추가하고 spring-boot 실행하면 바로 꺼진다. spring-boot-starter-web을 디펜던시로 추가해서 해결!
+>
+> - spring-boot-starter-web은 spring-boot-starter를 포함하고 json, tomcat, spring-web, spring-webmvc가 추가되어 있다. 
 
 
 > <B>위 처럼 변경하면 스프링 버전과 그래들 버전이 호환되지 않는다는 에러메시지가 출력된다. 위에서 언급했던 그래들 파일 버전을 적절하게 변경해주는 작업이 필요하다. </B>
